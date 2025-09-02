@@ -26,8 +26,6 @@ class Game:
     def refresh(self): 
         pygame.display.flip()
         pygame.time.Clock().tick(FPS)
-
-
 if __name__ == '__main__':
     os.system('cls')
     game = Game()
