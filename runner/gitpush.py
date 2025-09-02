@@ -14,8 +14,10 @@ def commit(commit_message):
     # Commit with message
     subprocess.run(["git", "commit", "-m", commit_message], check=True)
 
+
+
 commit_message = f"Update on {datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}"
 subprocesses_ = [(add,()),(commit,(commit_message,)),(push,())]
 
-for (_,args) in subprocesses_:
-    _(*args)
+for (fn,args) in subprocesses_:
+    fn(*args)
