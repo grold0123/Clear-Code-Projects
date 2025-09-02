@@ -3,7 +3,6 @@ import datetime
 
 # Generate a commit message with timestamp
 
-
 def add():
     # Stage all changes
     subprocess.run(["git", "add", "."], check=True)
